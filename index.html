@@ -66,18 +66,18 @@
 
 <style>
 /* =========================
-   :root ve renk temaları (Sarı & Siyah – Premium, Enerjik, Nesine Tarzı)
+   :root ve renk temaları (Premium Kırmızı – Kalebet / Canlı Bahis Tarzı)
 ========================= */
 :root {
-  --bg: #0a0a0a; /* Derin premium siyah */
-  --card: linear-gradient(180deg,#141411,#0f0f0b); /* Siyah + hafif sarı ışıltılı kart */
-  --surface: #12120e; /* Section arka planı */
+  --bg: #0a0000; /* Derin premium kırmızı-siyah */
+  --card: linear-gradient(180deg,#1a0505,#0f0404); /* Kızgın kırmızı gradyan */
+  --surface: #140404; /* Koyu kırmızı arka plan */
   --text: #ffffff; /* Saf beyaz yazı */
-  --muted: #ffdd00; /* Nesine sarısı – mat alt metin */
-  --accent: #ffed4e; /* Canlı sarı (ana accent) */
-  --accent-2: #ffff66; /* Hover için daha parlak sarı */
-  --border: #33331a; /* Koyu sarı border */
-  --shadow: rgba(255, 237, 78, 0.42); /* Altın sarısı gölge */
+  --muted: #ff3333; /* Canlı kırmızı alt metin */
+  --accent: #e10600; /* Ana premium kırmızı (Kalebet resmi) */
+  --accent-2: #ff1a1a; /* Hover için daha parlak kırmızı */
+  --border: #330f0f; /* Koyu kırmızı border */
+  --shadow: rgba(225, 6, 0, 0.48); /* Yoğun kırmızı gölge */
   --maxw: 1200px;
   --radius: 12px;
   --transition: 0.3s ease-in-out;
@@ -97,7 +97,7 @@ body {
   line-height: 1.7;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
-  text-shadow: 0 0 2px rgba(255, 237, 78, 0.12); /* Hafif altın ışıltı */
+  text-shadow: 0 0 2px rgba(225, 6, 0, 0.16); /* Hafif kırmızı ışıltı */
 }
 a {
   text-decoration: none;
@@ -105,15 +105,15 @@ a {
   transition: color var(--transition), text-shadow var(--transition);
 }
 a:hover {
-  color: var(--accent);
+  color: #ff4444;
   text-decoration: underline;
-  text-shadow: 0 0 10px rgba(255, 237, 78, 0.7);
+  text-shadow: 0 0 12px rgba(225, 6, 0, 0.9), 0 0 22px rgba(255, 50, 50, 0.7);
 }
 img {
   max-width: 100%;
   display: block;
   border-radius: var(--radius);
-  box-shadow: 0 0 14px rgba(255, 237, 78, 0.24);
+  box-shadow: 0 0 16px rgba(225, 6, 0, 0.32);
 }
 /* =========================
    HEADER
@@ -123,10 +123,10 @@ header.header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(10,10,10,0.95);
+  background: rgba(15,0,0,0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 4px 20px var(--shadow);
+  box-shadow: 0 4px 20px var(--shadow), 0 0 18px rgba(225, 6, 0, 0.3);
   transition: all var(--transition);
 }
 header .header-inner {
@@ -148,17 +148,17 @@ header .brand img {
   height: 52px;
   border-radius: 10px;
   transition: transform var(--transition), box-shadow var(--transition);
-  box-shadow: 0 0 16px rgba(255, 237, 78, 0.48);
+  box-shadow: 0 0 20px rgba(225, 6, 0, 0.7);
 }
 header .brand img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 28px rgba(255, 237, 78, 0.9);
+  box-shadow: 0 0 35px rgba(225, 6, 0, 1), 0 0 50px rgba(255, 50, 50, 0.7);
 }
 header .brand .title {
   font-weight: 700;
   font-size: 1.3rem;
   color: var(--text);
-  text-shadow: 0 0 7px rgba(255, 237, 78, 0.38);
+  text-shadow: 0 0 10px rgba(225, 6, 0, 0.6);
 }
 header .brand .subtitle {
   font-size: 0.88rem;
@@ -175,7 +175,7 @@ header .main-nav a {
   transition: color var(--transition), text-shadow var(--transition);
 }
 header .main-nav a:hover {
-  text-shadow: 0 0 10px rgba(255, 237, 78, 0.7);
+  text-shadow: 0 0 14px rgba(225, 6, 0, 0.9), 0 0 24px rgba(255, 50, 50, 0.6);
 }
 header .actions {
   display: flex;
@@ -188,18 +188,18 @@ header .actions {
 button, .btn {
   padding: 10px 20px;
   background: var(--accent);
-  color: #000000;
+  color: #ffffff;
   font-weight: 600;
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
   transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-  box-shadow: 0 0 18px rgba(255, 237, 78, 0.58);
+  box-shadow: 0 0 22px rgba(225, 6, 0, 0.8), inset 0 0 16px rgba(255, 80, 80, 0.4);
 }
 button:hover, .btn:hover {
   background: var(--accent-2);
   transform: translateY(-2px);
-  box-shadow: 0 0 32px rgba(255, 237, 78, 1);
+  box-shadow: 0 0 40px rgba(225, 6, 0, 1), 0 0 60px rgba(255, 50, 50, 0.9);
 }
 /* =========================
    KARTLAR / CONTAINER
@@ -209,12 +209,12 @@ button:hover, .btn:hover {
   padding: 20px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  box-shadow: 0 6px 18px var(--shadow);
+  box-shadow: 0 6px 18px var(--shadow), 0 0 20px rgba(225, 6, 0, 0.28);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 28px var(--shadow), 0 0 24px rgba(255, 237, 78, 0.48);
+  box-shadow: 0 12px 28px var(--shadow), 0 0 40px rgba(225, 6, 0, 0.7);
 }
 .container {
   max-width: var(--maxw);
@@ -227,12 +227,12 @@ section {
   margin: 16px 0;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  box-shadow: 0 4px 12px var(--shadow);
+  box-shadow: 0 4px 12px var(--shadow), 0 0 18px rgba(225, 6, 0, 0.24);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 section:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px var(--shadow), 0 0 22px rgba(255, 237, 78, 0.38);
+  box-shadow: 0 10px 20px var(--shadow), 0 0 35px rgba(225, 6, 0, 0.6);
 }
 /* =========================
    SEO & ACCESSIBILITY
@@ -241,7 +241,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text);
   font-weight: 700;
   line-height: 1.4;
-  text-shadow: 0 0 6px rgba(255, 237, 78, 0.28);
+  text-shadow: 0 0 8px rgba(225, 6, 0, 0.4);
 }
 p {
   margin-bottom: 1rem;
@@ -252,8 +252,8 @@ ul, ol {
   margin-bottom: 1rem;
 }
 strong {
-  color: var(--accent);
-  text-shadow: 0 0 8px rgba(255, 237, 78, 0.65);
+  color: var(--accent-2);
+  text-shadow: 0 0 12px rgba(225, 6, 0, 0.9);
 }
 /* =========================
    FOOTER
@@ -265,7 +265,7 @@ footer {
   font-size: 0.88rem;
   color: var(--muted);
   border-top: 1px solid var(--border);
-  box-shadow: 0 -2px 12px rgba(255, 237, 78, 0.20);
+  box-shadow: 0 -2px 14px rgba(225, 6, 0, 0.28);
 }
 /* =========================
    RESPONSIVE
@@ -296,9 +296,6 @@ footer {
   }
 }
 </style>
-
-
-
 
 
   <!-- 🔹 Structured Data: WebPage + FAQ + Breadcrumb -->
